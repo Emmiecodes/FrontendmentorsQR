@@ -1,0 +1,67 @@
+body, html {
+    background-color: hsl(212, 45%, 89%);
+    font-size: 15px;
+    font-family: outfit, Helvetica, sans-serif;
+    color: hsl(218, 44%, 22%);
+    box-sizing: border-box;    
+}
+
+.QRcontainer {
+width: 25%;
+max-width: 375px;
+box-shadow: 0.5rem 0.5rem 1rem 0.1rem gray;
+border-radius: 5%;
+margin: 0;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.contentOfContainer {
+    background-color: white;
+    padding: 2%;
+    border-radius: 5%;
+    text-align: center;   
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 5%;
+    margin-bottom: 0.25rem;
+}
+
+h3, p {
+    margin: 1rem 1rem;
+}
+
+h3 {
+    font-weight: 700;
+}
+
+p {
+    font-weight: 400;
+    color:  hsl(220, 15%, 55%);
+}
+
+/* Media Queries */
+/* Changed the range of min/max width to fit a broader screen size
+after I came across the samsung fold model */
+
+@Media only screen and (max-width: 480px) and (min-width: 280px) {
+.QRcontainer {
+width: 90%;
+font-size: 1.5rem;
+max-height: 100%;
+}
+}
+
+/*Tried to add another Media Query for tablets but it seems like the width doesn't
+increase extra after a certain percentage.*/
+@media only screen and (min-width: 700px) and (max-width: 1100px)
+{
+.QRcontainer {
+    width: 50%;
+}
+}
